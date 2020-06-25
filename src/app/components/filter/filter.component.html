@@ -1,0 +1,45 @@
+<section>
+<div class="content" role="main">
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <input style="text-align: center;" type="text"  name="filterPost" class="form-control" placeholder="Search...." [(ngModel)]="filterPost" >
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content" role="main">
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Source</th>
+                <th scope="col">Author</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">URL</th>
+                <th scope="col">Image</th>
+                <th scope="col">Published at</th>
+                <th scope="col">Content</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let article of articless | filer:filterPost">
+                <th scope="row">{{article.source.name}}</th>
+                <td>{{article.author}}</td>
+                <td>{{article.title}}</td>
+                <td>{{article.description}}</td>
+                <td>{{article.url}}</td>
+                <td>
+                  <img src="{{article.urlToImage}}" width="150px" class="img-fluid" alt="{{article.title}}">
+                </td>
+                <td>{{article.publishedAt}}</td>
+                <td>{{article.content}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+</div>
+</section>

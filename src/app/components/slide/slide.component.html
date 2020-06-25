@@ -1,0 +1,13 @@
+<section style="text-align: center;">
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let article of articless" >
+      <div class="picsum-img-wrapper">
+        <img src="{{article.urlToImage}}" alt="{{article.title}}" width="1000px" height="500px">
+      </div>
+      <div class="carousel-caption">
+        <h3>{{article.title}}</h3>
+        <p>{{article.description}}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</section>

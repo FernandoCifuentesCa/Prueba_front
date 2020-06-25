@@ -1,0 +1,31 @@
+<div class="content" role="main">
+<h2>ARTICLES</h2>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Source</th>
+              <th scope="col">Author</th>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
+              <th scope="col">URL</th>
+              <th scope="col">Image</th>
+              <th scope="col">Published at</th>
+              <th scope="col">Content</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let article of articless">
+              <th scope="row">{{article.source.name}}</th>
+              <td>{{article.author}}</td>
+              <td>{{article.title}}</td>
+              <td>{{article.description}}</td>
+              <td>{{article.url}}</td>
+              <td>
+                <img src="{{article.urlToImage}}" width="150px" class="img-fluid" alt="{{article.title}}">
+              </td>
+              <td>{{article.publishedAt}}</td>
+              <td>{{article.content}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
